@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici_1_JSBasic</title>
+
+
+    <script>
+
+        // Exercici 1 - "Hola mundo" en la consola (F12)
+        var titulo;
+
+        titulo = "Hola mundo";
+        console.log(titulo);
+
+
+
+        // Exercici 2 - alert
+        alert("El meu nom és Miguel Ángel Cuesta");
+
+
+
+        // Exercici 3 - Variables nom i cognoms
+        var nombre;
+        var apellidos;
+
+        nombre = "Miguel Ángel";
+        apellidos = "Cuesta";
+        console.log(nombre + " " + apellidos);
+
+
+
+        // Exercici 4 - Suma amb dos variables
+        var numero1 = 875;
+        var numero2 = 523;
+
+        console.log("La suma de " + numero1 + " i " + numero2 + " és " + (numero1 + numero2));
+
+
+
+        // Exercici 5 - Nota examen amb un if
+        var nota_examen = 4.9;
+        var asignatura = "ciencias";
+        var mensaje = prompt("Escribe 'ciencias' para saber su nota");
+
+        if (mensaje == "ciencias" && nota_examen < 5) {
+            alert("Has suspendido el examen de " + asignatura + ". La nota es de " + nota_examen);
+        } else {
+            alert("Lo siento, ha ocurrido un error");
+        }
+
+
+
+        // Exercici 6 - Reemplaçar i esborrar variable
+        var color_cotxe = ["blau", "verd"];
+        var frase = "Tinc un cotxe de color ";
+
+        console.log(frase + (color_cotxe[0]));
+        color_cotxe.shift();
+        frase = frase.replace(/\o/gi, "u");
+        console.log(frase + (color_cotxe[0]));
+
+
+
+
+        //Exercici 7 - Array i mostra en bucle de les variables
+        var objectes = ["taula", "cadira", "ordinador", "llibreta"];
+        var posicio;
+
+        for (posicio = 0; posicio < 4; posicio++) {
+            console.log("L'objecte " + (objectes[posicio]) + " està en la posició " + (posicio));
+        }
+
+
+
+        //Exercici 8 - Funcions Calculadora
+
+        var repetir = "si" || "sí";
+
+        function sumar(valor1, valor2) {
+            alert("La suma és: " + (valor1 + valor2));
+        }
+
+        function restar(valor1, valor2) {
+            alert("La resta és: " + (num1 - num2));
+        }
+
+        function multiplicar(valor1, valor2) {
+            alert("La multiplicació és: " + (num1 * num2));
+        }
+
+        function dividir(valor1, valor2) {
+            alert("La divisió és: " + (valor1 / valor2));
+        }
+
+        do {
+            var operacio = prompt("Quina operació vols calcular?: sumar · restar · multiplicar · dividir");
+            var operador1 = parseInt(prompt("Escriu el primer valor"));
+            var operador2 = parseInt(prompt("Escriu el segundo valor"));
+
+            if (operacio == "sumar") {
+                sumar(operador1, operador2);
+            }
+            else if (operacio == "restar") {
+                restar(operador1, operador2);
+            }
+            else if (operacio == "multiplicar") {
+                multiplicar(operador1, operador2);
+            }
+            else if (operacio == "dividir") {
+                dividir(operador1, operador2);
+            }
+            else {
+                alert("Hi ha un error");
+            }
+            repetir = prompt("Vols repetir?");
+
+        } while (repetir == "si" || "sí");
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
